@@ -14,3 +14,4 @@ Moving forward, I would prioritize privacy and security as integral components o
 In terms of security, I would implement strict access controls and data governance policies to ensure that only authorized personnel could interact with sensitive data. Additionally, I would adopt robust encryption methods, both in transit and at rest, to safeguard data from unauthorized access or cyber threats. Regular audits and updates to security protocols would also be part of my routine to ensure that the systems I work with remain resilient against evolving threats.
 
 Incorporating privacy and security into my data analysis practices would not only enhance the integrity of my work but also build greater trust in the insights generated. In today’s data-driven landscape, ensuring the protection of sensitive information is as important as the insights derived from the data itself, and I would ensure that these principles are a core part of my future work.
+
