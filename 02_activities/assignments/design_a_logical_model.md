@@ -4,9 +4,12 @@
 Create a logical model for a small bookstore. 📚
 
 At the minimum it should have employee, order, sales, customer, and book entities (tables). Determine sensible column and table design based on what you know about these concepts. Keep it simple, but work out sensible relationships to keep tables reasonably sized. Include a date table. There are several tools online you can use, I'd recommend [_Draw.io_](https://www.drawio.com/) or [_LucidChart_](https://www.lucidchart.com/pages/).
+![SQLassignment_Yibin Wang drawio (1)](https://github.com/user-attachments/assets/74c92269-f76c-4bd5-8d6d-d5f25230123b)
+
 
 ## Question 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+![SQLassignment_Yibin Wang drawio (1)](https://github.com/user-attachments/assets/74c92269-f76c-4bd5-8d6d-d5f25230123b)
 
 ## Question 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2?
@@ -17,7 +20,28 @@ Bonus: Are there privacy implications to this, why or why not?
 ```
 Your answer...
 ```
+Type 1: will overwrite changes.
+CREATE TABLE CUSTOMER_ADDRESS (
+    customer_id INT PRIMARY KEY,
+    address VARCHAR,
+    country VARCHAR
+    state VARCHAR,
+    city VARCHAR,
+    postal_code VARCHAR,
+    note VARCHAR,)
 
+Type 2: will retain changes.
+CREATE TABLE CUSTOMER_ADDRESS (
+    customer_address_id INT PRIMARY KEY,
+    customer_id INT,
+    address VARCHAR,
+    country VARCHAR
+    state VARCHAR,
+    city VARCHAR,
+    postal_code VARCHAR,
+    note VARCHAR,
+    start_date DATE,
+    Is_active BOOLEAN)
 ## Question 4
 Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
@@ -25,7 +49,9 @@ Highlight at least two differences between it and your ERD. Would you change any
 ```
 Your answer...
 ```
-
+1. more tables, more fields included, much more complicated;
+2. aside from PK, FK, there are also U（for unique）listed.
+   
 # Criteria
 
 [Assignment Rubric](./assignment_rubric.md)
